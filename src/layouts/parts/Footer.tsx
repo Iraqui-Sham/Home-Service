@@ -13,10 +13,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
               <img
-                src="/airo-assets/images/logo/horizontal?variant=solid"
-                alt="HomeServe logo"
-                className="h-9 w-auto object-contain brightness-0 invert"
+                //src="/assets/logo.png"
+                //alt="HomeServe logo"
+               // className="h-9 w-auto object-contain brightness-0 invert"
               />
+              <h2>Home Service Platform</h2>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
               India's most trusted home service marketplace. Connecting homeowners with verified professionals for all your home needs.
@@ -91,21 +92,21 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-blue-400 mt-0.5 shrink-0" />
-                <span className="text-sm text-gray-400">123 Service Hub, Koramangala, Bengaluru, Karnataka 560034</span>
+                <span className="text-sm text-gray-400">123 Service Hub, sector 110, Noida, Uttar Pradesh 560034</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-blue-400 shrink-0" />
-                <a href="tel:+919876543210" className="text-sm text-gray-400 hover:text-white transition-colors">+91 98765 43210</a>
+                <a href="tel:+919570393020" className="text-sm text-gray-400 hover:text-white transition-colors">+91 9570393020</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-blue-400 shrink-0" />
-                <a href="mailto:hello@homeserve.in" className="text-sm text-gray-400 hover:text-white transition-colors">hello@homeserve.in</a>
+                <a href="mailto:alammdshamsher956@gmail.com" className="text-sm text-gray-400 hover:text-white transition-colors">alammdshamsher956@gmail.com</a>
               </li>
             </ul>
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/9570393020?text=Hello%20HomeServe!%20I%20have%20a%20query%20regarding%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold rounded-lg transition-colors"

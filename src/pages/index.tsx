@@ -41,7 +41,7 @@ const services = [
     reviews: 1240,
     description: 'Complete AC deep cleaning, filter wash, gas check & performance optimization by certified technicians.',
     image: '/assets/ac.jpg',
-    whatsapp: '919876543210',
+    whatsapp: '9570393020',
   },
   {
     id: 2,
@@ -55,7 +55,7 @@ const services = [
     reviews: 876,
     description: 'Safe wiring, switch board repair, MCB fitting, fan installation by licensed electricians.',
     image: '/assets/electrical.jpg',
-    whatsapp: '919876543210',
+    whatsapp: '9570393020',
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const services = [
     reviews: 654,
     description: 'Tap repair, pipe leakage fix, toilet installation, drainage cleaning by expert plumbers.',
     image: '/assets/plumbing.jpg',
-    whatsapp: '919876543210',
+    whatsapp: '9570393020',
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ const services = [
     reviews: 432,
     description: 'Premium quality interior painting with Asian Paints / Berger. Includes wall prep & 2 coats.',
     image: '/assets/panting.jpg',
-    whatsapp: '919876543210',
+    whatsapp: '9570393020',
   },
   {
     id: 5,
@@ -97,7 +97,7 @@ const services = [
     reviews: 318,
     description: 'Wardrobe, bed, sofa, shelf assembly. Bring your own flat-pack or we source the material.',
     image: '/assets/carpenter.jpg',
-    whatsapp: '919876543210',
+    whatsapp: '9570393020',
   },
   {
     id: 6,
@@ -111,7 +111,7 @@ const services = [
     reviews: 2100,
     description: 'Full home deep clean — kitchen, bathrooms, bedrooms, balcony. Eco-friendly products used.',
     image: '/assets/cleaner.jpg',
-    whatsapp: '919876543210',
+    whatsapp: '9570393020',
   },
 ];
 
@@ -845,7 +845,7 @@ export default function HomePage() {
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
               <a
-                href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20book%20a%20home%20service."
+                href="https://wa.me/9570393020?text=Hi!%20I%20want%20to%20book%20a%20home%20service."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-600 hover:bg-green-700 text-white font-bold text-sm rounded-xl transition-all shadow-lg hover:shadow-green-900/30"

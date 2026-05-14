@@ -388,7 +388,7 @@ export default function AboutPage() {
                 Browse Services <ArrowRight size={15} />
               </Link>
               <a
-                href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20book%20a%20home%20service."
+                href="https://wa.me/9570393020?text=Hi!%20I%20want%20to%20book%20a%20home%20service."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-7 py-3.5 bg-green-600 hover:bg-green-700 text-white font-bold text-sm rounded-xl transition-colors shadow-lg"

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from '@dr.pogodin/react-helmet';
@@ -28,12 +28,12 @@ interface Booking {
 }
 
 // ── Mock Data ─────────────────────────────────────────────────────────────────
-const MOCK_BOOKINGS: Booking[] = [
+const DEFAULT_BOOKINGS: Booking[] = [
   {
     id: 'BK-2024-001',
     serviceName: 'AC Deep Clean & Service',
     category: 'AC Repair',
-    image: '/airo-assets/images/services/ac-repair',
+    image: '/assets/ac.jpg',
     price: '₹799',
     date: '2026-05-16',
     timeSlot: '10:00 AM – 12:00 PM',
@@ -47,7 +47,7 @@ const MOCK_BOOKINGS: Booking[] = [
     id: 'BK-2024-002',
     serviceName: 'Home Deep Cleaning',
     category: 'Cleaning',
-    image: '/airo-assets/images/services/cleaning',
+    image: '/assets/cleaner.jpg',
     price: '₹1,499',
     date: '2026-05-18',
     timeSlot: '8:00 AM – 10:00 AM',
@@ -61,7 +61,7 @@ const MOCK_BOOKINGS: Booking[] = [
     id: 'BK-2024-003',
     serviceName: 'Electrical Wiring & Repair',
     category: 'Electrician',
-    image: '/airo-assets/images/services/electrical',
+    image: '/assets/electrical.jpg',
     price: '₹650',
     date: '2026-05-08',
     timeSlot: '2:00 PM – 4:00 PM',
@@ -76,7 +76,7 @@ const MOCK_BOOKINGS: Booking[] = [
     id: 'BK-2024-004',
     serviceName: 'Bathroom Plumbing Fix',
     category: 'Plumbing',
-    image: '/airo-assets/images/services/plumbing',
+    image: '/assets/plumbing.jpg',
     price: '₹499',
     date: '2026-05-01',
     timeSlot: '12:00 PM – 2:00 PM',
@@ -91,7 +91,7 @@ const MOCK_BOOKINGS: Booking[] = [
     id: 'BK-2024-005',
     serviceName: 'Interior Wall Painting',
     category: 'Painting',
-    image: '/airo-assets/images/services/painting',
+    image: '/assets/panting.jpg',
     price: '₹8,400',
     date: '2026-04-22',
     timeSlot: '8:00 AM – 10:00 AM',
@@ -104,9 +104,9 @@ const MOCK_BOOKINGS: Booking[] = [
 ];
 
 const STATUS_CONFIG: Record<BookingStatus, { label: string; color: string; bg: string; icon: typeof CheckCircle }> = {
-  upcoming:  { label: 'Upcoming',  color: 'text-blue-700',  bg: 'bg-blue-50',   icon: Calendar },
-  completed: { label: 'Completed', color: 'text-green-700', bg: 'bg-green-50',  icon: CheckCircle },
-  cancelled: { label: 'Cancelled', color: 'text-red-600',   bg: 'bg-red-50',    icon: XCircle },
+  upcoming: { label: 'Upcoming', color: 'text-blue-700', bg: 'bg-blue-50', icon: Calendar },
+  completed: { label: 'Completed', color: 'text-green-700', bg: 'bg-green-50', icon: CheckCircle },
+  cancelled: { label: 'Cancelled', color: 'text-red-600', bg: 'bg-red-50', icon: XCircle },
 };
 
 function formatDate(dateStr: string): string {
@@ -233,14 +233,27 @@ function BookingCard({ booking }: { booking: Booking }) {
 export default function BookingsPage() {
   const [activeTab, setActiveTab] = useState<'all' | BookingStatus>('all');
 
+  const [bookings, setBookings] = useState<Booking[]>([]);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('hs_bookings');
+
+    if (stored) {
+      setBookings(JSON.parse(stored));
+    } else {
+      setBookings(DEFAULT_BOOKINGS);
+      localStorage.setItem('hs_bookings', JSON.stringify(DEFAULT_BOOKINGS));
+    }
+  }, []);
+
   const tabs: { key: 'all' | BookingStatus; label: string; count: number }[] = [
-    { key: 'all', label: 'All Bookings', count: MOCK_BOOKINGS.length },
-    { key: 'upcoming', label: 'Upcoming', count: MOCK_BOOKINGS.filter((b) => b.status === 'upcoming').length },
-    { key: 'completed', label: 'Completed', count: MOCK_BOOKINGS.filter((b) => b.status === 'completed').length },
-    { key: 'cancelled', label: 'Cancelled', count: MOCK_BOOKINGS.filter((b) => b.status === 'cancelled').length },
+    { key: 'all', label: 'All Bookings', count: bookings.length },
+    { key: 'upcoming', label: 'Upcoming', count: bookings.filter((b) => b.status === 'upcoming').length },
+    { key: 'completed', label: 'Completed', count: bookings.filter((b) => b.status === 'completed').length },
+    { key: 'cancelled', label: 'Cancelled', count: bookings.filter((b) => b.status === 'cancelled').length },
   ];
 
-  const filtered = activeTab === 'all' ? MOCK_BOOKINGS : MOCK_BOOKINGS.filter((b) => b.status === activeTab);
+  const filtered = activeTab === 'all' ? bookings : bookings.filter((b) => b.status === activeTab);
 
   return (
     <>
@@ -266,9 +279,9 @@ export default function BookingsPage() {
             className="grid grid-cols-3 gap-3 mt-6"
           >
             {[
-              { label: 'Total Bookings', value: MOCK_BOOKINGS.length, color: 'text-white' },
-              { label: 'Upcoming', value: MOCK_BOOKINGS.filter((b) => b.status === 'upcoming').length, color: 'text-blue-300' },
-              { label: 'Completed', value: MOCK_BOOKINGS.filter((b) => b.status === 'completed').length, color: 'text-green-300' },
+              { label: 'Total Bookings', value: bookings.length, color: 'text-white' },
+              { label: 'Upcoming', value: bookings.filter((b) => b.status === 'upcoming').length, color: 'text-blue-300' },
+              { label: 'Completed', value: bookings.filter((b) => b.status === 'completed').length, color: 'text-green-300' },
             ].map((stat) => (
               <div key={stat.label} className="bg-white/10 rounded-2xl px-4 py-3 text-center">
                 <div className={`text-xl font-extrabold ${stat.color}`}>{stat.value}</div>
@@ -286,11 +299,10 @@ export default function BookingsPage() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 ${
-                activeTab === tab.key
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 ${activeTab === tab.key
                   ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200'
                   : 'bg-white text-gray-600 border border-gray-200 hover:border-indigo-300 hover:text-indigo-600'
-              }`}
+                }`}
             >
               {tab.label}
               <span className={`text-xs px-1.5 py-0.5 rounded-full font-bold ${activeTab === tab.key ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>
@@ -339,7 +351,7 @@ export default function BookingsPage() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white text-xs font-bold rounded-xl transition-colors shrink-0"
           >
-            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
             Chat Support
           </a>
         </div>

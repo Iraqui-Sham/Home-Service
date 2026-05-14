@@ -84,7 +84,7 @@ function ServiceCard({ service }: { service: Service }) {
               Details
             </Link>
             <a
-              href={`https://wa.me/919876543210?text=${msg}`}
+              href={`https://wa.me/9570393020?text=${msg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-lg transition-colors"

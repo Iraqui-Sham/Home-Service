@@ -50,18 +50,16 @@ const router = createBrowserRouter(routeTree);
 
 export default function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-      {/*
-        CookieBanner reads document.cookie and subscribes to browser events.
-        App.tsx is client-only (entry-server.tsx renders the route tree
-        directly without importing App), so no SSR gate is needed here.
-      */}
-      <CookieBannerErrorBoundary>
-        <Suspense fallback={null}>
-          <CookieBanner />
-        </Suspense>
-      </CookieBannerErrorBoundary>
-    </>
+    <AuthProvider>
+      <>
+        <RouterProvider router={router} />
+
+        <CookieBannerErrorBoundary>
+          <Suspense fallback={null}>
+            <CookieBanner />
+          </Suspense>
+        </CookieBannerErrorBoundary>
+      </>
+    </AuthProvider>
   );
 }

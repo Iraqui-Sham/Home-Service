@@ -2,6 +2,8 @@ import { RouteObject } from 'react-router-dom';
 import { lazy } from 'react';
 import HomePage from './pages/index';
 import ProdNotFoundPage from './pages/_404';
+const ProfilePage = lazy(() => import('./pages/profile'));
+const ChangePasswordPage = lazy(() => import('./pages/change-password'));
 
 const NotFoundPage = ProdNotFoundPage;
 
@@ -50,6 +52,14 @@ export const routes: RouteObject[] = [
     {
         path: '/signup',
         element: <SignupPage />,
+    },
+    {
+        path: '/profile',
+        element: <ProfilePage />,
+    },
+    {
+        path: '/profile/change-password',
+        element: <ChangePasswordPage />,
     },
     {
         path: '*',

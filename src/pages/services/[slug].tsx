@@ -265,7 +265,7 @@ export default function ServiceDetailPage() {
 
                   {/* Book via WhatsApp */}
                   <a
-                    href={`https://wa.me/919876543210?text=${bookingMsg}`}
+                    href={`https://wa.me/9570393020?text=${bookingMsg}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full flex items-center justify-center gap-2 py-3.5 bg-green-600 hover:bg-green-700 text-white font-bold text-sm rounded-xl transition-colors shadow-md shadow-green-200"
@@ -291,7 +291,7 @@ export default function ServiceDetailPage() {
                 <p className="text-xs font-semibold text-indigo-700 mb-1">Need help choosing?</p>
                 <p className="text-xs text-indigo-500 mb-3">Chat with us and we'll recommend the right service for your needs.</p>
                 <a
-                  href="https://wa.me/919876543210?text=Hi!%20I%20need%20help%20choosing%20a%20service."
+                  href="https://wa.me/9570393020?text=Hi!%20I%20need%20help%20choosing%20a%20service."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1"

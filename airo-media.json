@@ -1,0 +1,287 @@
+{
+  "pages/home/hero": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1435449602",
+    "searchQuery": "professional home service worker technician modern home interior",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2256211646",
+      "https://img1.wsimg.com/isteam/getty/2237095385",
+      "https://img1.wsimg.com/isteam/getty/1464505749",
+      "https://img1.wsimg.com/isteam/getty/1166155413"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:44.973Z",
+    "lastUpdated": "2026-05-13T21:02:44.973Z",
+    "gettyId": "1435449602",
+    "alternativeGettyIds": [
+      "2256211646",
+      "2237095385",
+      "1464505749",
+      "1166155413"
+    ],
+    "requestedSize": {
+      "width": 900,
+      "height": 700,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "moods": "warm,natural",
+    "numberOfPeople": "one"
+  },
+  "pages/home/about": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2248673360",
+    "searchQuery": "happy homeowner with professional service technician modern home",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2252536487",
+      "https://img1.wsimg.com/isteam/getty/1303103363",
+      "https://img1.wsimg.com/isteam/getty/2242075757"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:46.522Z",
+    "lastUpdated": "2026-05-13T21:02:46.522Z",
+    "gettyId": "2248673360",
+    "alternativeGettyIds": [
+      "2252536487",
+      "1303103363",
+      "2242075757"
+    ],
+    "requestedSize": {
+      "width": 700,
+      "height": 600,
+      "fit": "cover"
+    },
+    "orientations": "vertical",
+    "moods": "warm,natural",
+    "numberOfPeople": "two"
+  },
+  "services/ac-repair": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2185274469",
+    "searchQuery": "AC air conditioner repair technician service",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2206342744",
+      "https://img1.wsimg.com/isteam/getty/2154707821"
+    ],
+    "userModified": true,
+    "createdAt": "2026-05-13T21:02:47.220Z",
+    "lastUpdated": "2026-05-13T21:03:55.511Z",
+    "gettyId": "2185274469",
+    "alternativeGettyIds": [
+      "2206342744",
+      "2154707821"
+    ],
+    "requestedSize": {
+      "width": 500,
+      "height": 360,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "services/electrical": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1345670559",
+    "searchQuery": "electrician electrical wiring home repair professional",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2213571973",
+      "https://img1.wsimg.com/isteam/getty/2219863537"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:48.329Z",
+    "lastUpdated": "2026-05-13T21:02:48.329Z",
+    "gettyId": "1345670559",
+    "alternativeGettyIds": [
+      "2213571973",
+      "2219863537"
+    ],
+    "requestedSize": {
+      "width": 500,
+      "height": 360,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "services/plumbing": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2231259077",
+    "searchQuery": "plumber plumbing bathroom pipe repair professional",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2197665899",
+      "https://img1.wsimg.com/isteam/getty/944254400"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:49.326Z",
+    "lastUpdated": "2026-05-13T21:02:49.326Z",
+    "gettyId": "2231259077",
+    "alternativeGettyIds": [
+      "2197665899",
+      "944254400"
+    ],
+    "requestedSize": {
+      "width": 500,
+      "height": 360,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "services/painting": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2222883793",
+    "searchQuery": "interior house painting professional painter wall",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1221306262",
+      "https://img1.wsimg.com/isteam/getty/2223733286"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:50.186Z",
+    "lastUpdated": "2026-05-13T21:02:50.186Z",
+    "gettyId": "2222883793",
+    "alternativeGettyIds": [
+      "1221306262",
+      "2223733286"
+    ],
+    "requestedSize": {
+      "width": 500,
+      "height": 360,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "services/carpentry": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2193187678",
+    "searchQuery": "carpenter furniture assembly woodwork professional home",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1158770056",
+      "https://img1.wsimg.com/isteam/getty/1488453030"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:51.018Z",
+    "lastUpdated": "2026-05-13T21:02:51.018Z",
+    "gettyId": "2193187678",
+    "alternativeGettyIds": [
+      "1158770056",
+      "1488453030"
+    ],
+    "requestedSize": {
+      "width": 500,
+      "height": 360,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "services/cleaning": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2190857423",
+    "searchQuery": "professional home deep cleaning service modern house",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1487852701",
+      "https://img1.wsimg.com/isteam/getty/2164773052"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:02:52.092Z",
+    "lastUpdated": "2026-05-13T21:02:52.092Z",
+    "gettyId": "2190857423",
+    "alternativeGettyIds": [
+      "1487852701",
+      "2164773052"
+    ],
+    "requestedSize": {
+      "width": 500,
+      "height": 360,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "logo/horizontal": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9df061b0-1472-4ed5-ae78-4eaa18249f65/session/7fdad4b2-62b9-42a3-8610-434d47e5ca5d/horizontal-transparent-224966235b9eed5046b6d45efb03e4cc/logo-homeserve-224966.png",
+    "searchQuery": "HomeServe",
+    "alternatives": [],
+    "solidUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9df061b0-1472-4ed5-ae78-4eaa18249f65/session/7fdad4b2-62b9-42a3-8610-434d47e5ca5d/horizontal-transparent-224966235b9eed5046b6d45efb03e4cc/logo-homeserve-224966.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9df061b0-1472-4ed5-ae78-4eaa18249f65/session/7fdad4b2-62b9-42a3-8610-434d47e5ca5d/horizontal-solid-ce0bd587a3a87466088a6733145d1a6d/logo-homeserve-ce0bd5.png"
+    },
+    "reversedUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9df061b0-1472-4ed5-ae78-4eaa18249f65/session/7fdad4b2-62b9-42a3-8610-434d47e5ca5d/horizontal-transparent-224966235b9eed5046b6d45efb03e4cc/logo-homeserve-224966.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9df061b0-1472-4ed5-ae78-4eaa18249f65/session/7fdad4b2-62b9-42a3-8610-434d47e5ca5d/horizontal-reversed-87a4699b5ce501385ef9590e95137b0e/logo-homeserve-87a469.png"
+    },
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9df061b0-1472-4ed5-ae78-4eaa18249f65/session/7fdad4b2-62b9-42a3-8610-434d47e5ca5d/horizontal-transparent-224966235b9eed5046b6d45efb03e4cc/logo-homeserve-224966.png": {
+        "sessionId": "7fdad4b2-62b9-42a3-8610-434d47e5ca5d",
+        "logoId": "22496623"
+      }
+    },
+    "userModified": true,
+    "createdAt": "2026-05-13T21:03:51.508Z",
+    "lastUpdated": "2026-05-14T06:42:13.694Z"
+  },
+  "pages/about/team": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2215930957",
+    "searchQuery": "diverse professional home service team smiling",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2245186073",
+      "https://img1.wsimg.com/isteam/getty/1400823491"
+    ],
+    "userModified": false,
+    "createdAt": "2026-05-13T21:31:04.430Z",
+    "lastUpdated": "2026-05-13T21:31:04.430Z",
+    "gettyId": "2215930957",
+    "alternativeGettyIds": [
+      "2245186073",
+      "1400823491"
+    ],
+    "requestedSize": {
+      "width": 800,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "numberOfPeople": "group"
+  },
+  "pages/about/mission": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1589754043",
+    "searchQuery": "modern home interior professional service worker",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2242599911",
+      "https://img1.wsimg.com/isteam/getty/2204739663"
+    ],
+    "userModified": true,
+    "createdAt": "2026-05-13T21:31:05.286Z",
+    "lastUpdated": "2026-05-13T21:31:44.324Z",
+    "gettyId": "1589754043",
+    "alternativeGettyIds": [
+      "2242599911",
+      "2204739663"
+    ],
+    "requestedSize": {
+      "width": 700,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  },
+  "pages/contact/map": {
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2240890876",
+    "searchQuery": "Bengaluru city aerial view modern office building",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1382384282",
+      "https://img1.wsimg.com/isteam/getty/2224221889"
+    ],
+    "userModified": true,
+    "createdAt": "2026-05-13T21:33:26.897Z",
+    "lastUpdated": "2026-05-13T21:33:45.482Z",
+    "gettyId": "2240890876",
+    "alternativeGettyIds": [
+      "1382384282",
+      "2224221889"
+    ],
+    "requestedSize": {
+      "width": 900,
+      "height": 400,
+      "fit": "cover"
+    },
+    "orientations": "horizontal"
+  }
+}
